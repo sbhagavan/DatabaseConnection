@@ -11,7 +11,7 @@ namespace test2.DatabaseImplementors
 {
     public class SqlServerLikeData : ILikeDataHandler
     {
-        OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory("Server=(local);Database=3.0;uid=sa;pwd=pp@dm1n", false, SqlServerOrmLiteDialectProvider.Instance);
+        OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory("Server=(local);Database=3.0;uid=sa;pwd=Md7cX4sT", false, SqlServerOrmLiteDialectProvider.Instance);
         public List<ppLikes> GetLike(int nomid)
         {
             IDbConnection dbConn = dbFactory.OpenDbConnection();
