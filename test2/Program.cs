@@ -21,16 +21,16 @@ namespace test2
             kernel.Bind<IUserDataHandler>().To<SqlLiteUserData>();
             kernel.Bind<ICommentDataHandler>().To<SqlServerCommentData>();
             var test = kernel.Get<CRUDTester>();
-            var rows = test.GetComment(3);
+            var rows = test.GetComment(2);
             foreach (var row in rows)
                 Console.WriteLine(row.CommentText);
 
-            var likes = test.GetLike(406508);
-            if (likes != null)
-                Console.WriteLine("Number of likes = {0}", likes.Count);
+            //var likes = test.GetLike(406508);
+            //if (likes != null)
+            //    Console.WriteLine("Number of likes = {0}", likes.Count);
 
-            var activities = test.GetActivitiesByPortal(146);
-            Console.WriteLine("Number of activities = {0}", activities.Count);
+            //var activities = test.GetActivitiesByPortal(146);
+            //Console.WriteLine("Number of activities = {0}", activities.Count);
 
             Console.ReadLine();
         }
