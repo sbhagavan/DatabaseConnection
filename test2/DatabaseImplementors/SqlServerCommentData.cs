@@ -11,12 +11,12 @@ namespace test2.DatabaseImplementors
 {
     public class SqlServerCommentData : ICommentDataHandler
     {
-        OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory("Server=(local);Database=3.0;uid=sa;pwd=pp@dm1n", false, SqlServerOrmLiteDialectProvider.Instance);
+        OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory("Server=(local);Database=3.0;uid=sa;pwd=Md7cX4sT", false, SqlServerOrmLiteDialectProvider.Instance);
         public List<ppComments> GetComments(int nomid)
         {
             IDbConnection dbConn = dbFactory.OpenDbConnection();
             IDbCommand dbCmd = dbConn.CreateCommand();
-            var rows = dbCmd.Select<ppComments>("select * from ppComments where USR_nID = 3");
+            var rows = new List<ppComments>() { dbConn.Id<ppComments>(nomid) };
             return rows;
         }
 

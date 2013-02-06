@@ -12,6 +12,7 @@ namespace test2
         [AutoIncrement]
         public int Id { get; set; }
 
+        [Alias("USR_sFirstName")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleInitial { get; set; }

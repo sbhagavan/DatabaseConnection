@@ -9,8 +9,8 @@ namespace test2
 {
     public class ppComments
     {
-        [AutoIncrement]
-        public int CommentID { get; set; }
+        [AutoIncrement, PrimaryKey, Alias("CommentID")]
+        public int Id { get; set; }
 
         public string CommentType { get; set; }
 
